@@ -64,7 +64,7 @@ const Register = () => {
                 className="mt-8 w-full bg-primary hover:bg-opacity-90 text-white font-bold"
                 asChild
               >
-                <a href="https://example.com/register" target="_blank" rel="noopener noreferrer">
+                <a href="https://lynk.id/tryfrfefo" target="_blank" rel="noopener noreferrer">
                   Register Now <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

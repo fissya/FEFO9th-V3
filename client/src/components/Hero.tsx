@@ -3,8 +3,12 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { JapanesePattern } from "@/images/JapanesePattern";
 import { SakuraPattern } from "@/images/SakuraPattern";
+import CountdownTimer from "./CountdownTimer";
 
 const Hero = () => {
+  // Set the event date (November 18-19, 2023)
+  const eventDate = new Date("2023-11-18T09:00:00");
+  
   return (
     <section id="hero" className="min-h-screen flex items-center pt-16 pb-20 relative overflow-hidden">
       {/* Background patterns */}
@@ -47,7 +51,7 @@ const Hero = () => {
             <p className="text-foreground mb-8 max-w-lg mx-auto md:mx-0">
               Join us for the 9th annual FEFO event, organized by KARBIT and KIR. An exciting educational Olympics with a Japanese theme for junior high school students across Bandung Raya.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-8">
               <Button 
                 size="lg" 
                 asChild
@@ -68,6 +72,16 @@ const Hero = () => {
                 </a>
               </Button>
             </div>
+            
+            {/* Countdown Timer */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="md:pr-8"
+            >
+              <CountdownTimer eventDate={eventDate} eventName="FEFO 9" />
+            </motion.div>
           </motion.div>
           
           <motion.div 
