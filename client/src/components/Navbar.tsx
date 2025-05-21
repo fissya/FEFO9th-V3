@@ -44,9 +44,9 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <span className="text-primary font-japanese font-bold text-xl cursor-pointer">
+              <a className="text-primary font-japanese font-bold text-xl">
                 FEFO<span className="text-accent">9</span>
-              </span>
+              </a>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
